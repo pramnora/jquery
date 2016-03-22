@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>Show/Hide hidden page content on click event...</title>
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <style type="text/css">
+   div{display:none;}
+  </style>
+  <script>
+   var flag=0;
+   $(document).ready(function() {
+    $("button").click(function(){
+     $("div").slideToggle();
+     if (flag==0){
+      flag=1;$("button").text("Show message");
+     } else {
+      flag=0;$("button").text("Hide message");
+     }
+    }); 
+   });
+  </script>
+ </head>
+ <body>
+  <button>Show message</button>
+  <div>Hello, world!</div>
+ </body>
+</html>
