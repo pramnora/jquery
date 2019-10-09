@@ -44,5 +44,35 @@
    Last updated: <i>9th Oct 2019 21:57 PM GMT</i>  
   </p>   
   <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+  <script>
+$(document).ready(function(){
+
+  $("button#button1").click(function(){
+    $("h1").hide(); //...hide header
+  });  
+  
+  $("button#button2").click(function(){
+    $("h1").show(); //...show header
+  });  
+
+  $("button#button3").click(function(){
+    $(".para1").fadeOut(); //...fade paragraph, until it vanishes
+  });  
+
+  $("button#button4").click(function(){
+    $(".para1").fadeIn(); //...fade paragraph, until it vanishes
+  });    
+
+  $("button#button5").click(function(){
+    $("#para2").text("This text has been replaced."); //... replace text
+  });  
+
+  $("button#button6").click(function(){
+    $("#para2").text("Paragraph 2."); //... restore 
+    
+  });  
+
+});
+  </script>
  </body>
 </html>
