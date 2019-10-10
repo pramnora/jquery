@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--Created: 10th Oct 2019 13:18 PM GMT
+    Updated: 10th Oct 2019 12:18 PM GMT-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    #buttons{
+     /*position:relative;*/
+    }
+    #box{
+     width:100px;
+     height:100px;
+     background-color:orange;
+     position:absolute; 
+    }  
+  </style>  
+</head>
+<body>
+  
+ <div id="#buttons">
+  <button id="btnHide">Hide</button> 
+  <button id="btnShow">Show</button> 
+  <button id="btnToggle">Toggle</button> 
+  <button id="btnFadeOut">FadeOut</button> 
+  <button id="btnFadeIn">FadeIn</button> 
+  <button id="btnShrink">Shrink</button> 
+  <button id="btnGrow">Grow</button> 
+  <button id="btnSlideRight">Slide Right</button> 
+  <button id="btnSlideLeft">Slide Left</button> 
+ </div>
+  
+ <br> 
+
+ <div id="box"></div>
+
+ <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+
+ <script>
+ $(document).ready(function(){
+ $("#btnHide").click(function(){
+   $("#box").hide();
+ }); 
+ $("#btnShow").click(function(){
+   $("#box").show();
+ }); 
+ $("#btnToggle").click(function(){
+   $("#box").toggle();
+ }); 
+ $("#btnFadeOut").click(function(){
+   $("#box").fadeOut(3000);
+ }); 
+ $("#btnFadeIn").click(function(){
+   $("#box").fadeIn(3000);
+ }); 
+ $("#btnShrink").click(function(){
+   $("#box").animate({width:'-=10'});   
+ }); 
+ $("#btnGrow").click(function(){
+   $("#box").animate({width:'+=10'});   
+ }); 
+ $("#btnSlideRight").click(function(){
+   $("#box").animate({right:'80'});   
+ }); 
+ $("#btnSlideLeft").click(function(){
+   $("#box").animate({left:'10'});   
+ }); 
+});
+ </script>
+
+ <!--NOTE: BUG found! Sliding only happens no more than just merely, once;
+           and, for some reason, refuses to happen, again, repeatedly?!-->
+  
+</body>
+</html>
