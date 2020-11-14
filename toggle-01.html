@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+
+  <meta charset="utf-8" />
+
+  <title>JQuery test...</title>
+
+  <style>
+   header{text-align:center;}
+   footer{text-align:right;}
+   main{}
+   .clsTimeDateStamp{color:red;font-style:italic;} 
+   #idOL,#idUL,#idDL,#idDiv{display:none;}
+  </style>
+
+ </head>
+ 
+ <body>
+
+  <header>
+
+   <h1>JQuery Test...</h1>
+
+  </header>
+
+  <hr />
+
+  <main>
+
+   <blockquote>
+
+    <h2 id="id1">Content 1</h2>
+
+    <ol id="idOL" type="a">
+     a
+     <br />b
+     <br />c
+     <br />d
+     <br />e
+     <br />f
+     <br />g   
+    </ol>
+
+    <h2 id="id2">Content 2</h2>
+
+    <ul id="idUL" type="a">
+     <li>Hungary</li>
+     <br /><li>India</li>
+     <br /><li>Japan</li>
+     <br /><li>Kazakstan</li>
+     <br /><li>Lapland</li>
+     <br /><li>Mongolia</li>
+     <br /><li>Norway</li>   
+    </ul>
+
+    <h2 id="id3">Content 3</h2>
+
+    <blockquote>
+
+     <dl id="idDL">
+      <dt>one</dt><dd>- 1</dd>
+      <br />two</dt><dd>- 2</dd>
+      <br />three</dt><dd>- 3</dd>
+     </dl>
+
+    </blockquote>
+
+    <h2 id="id4">Content 4</h2>
+
+    <blockquote>
+
+     <div id="idDiv">
+      This is sentence one.
+      <br />This is sentence two.
+      <br />This is sentence three.
+      <br />This is sentence four.
+      <br />This is sentence five.
+     </div>
+
+    </blockquote>
+
+   </blockquote>
+
+  </main>
+
+  <hr />
+
+  <footer>
+
+   <p>
+    Page created:
+    <span class="clsTimeDateStamp">
+     04:02 14/11/2020
+    </span>
+    <br />
+    Last updated:
+    <span class="clsTimeDateStamp">
+     04:02 14/11/2020
+    </span>
+   </p>
+
+  </footer>
+
+  <!--link to external JQuery script-->
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <!--JQuery code/start...-->
+  <script>
+
+   $(document).ready(function(){
+
+    $("h2#id1").click(function(){
+     $("#idOL").toggle();
+    });
+
+    $("h2#id2").click(function(){
+     $("#idUL").toggle();
+    });
+
+    $("h2#id3").click(function(){
+     $("#idDL").toggle();
+    });
+
+    $("h2#id4").click(function(){
+     $("#idDiv").toggle();
+    });
+
+   });
+
+  <!--...JQuery code/end-->
+  </script>
+
+ </body>
+
+</html>
