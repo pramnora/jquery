@@ -12,7 +12,7 @@
 
     <h2 id="idHeaderTest">::Test</h2>
 
-    <ul id="idTest"> 
+    <ul id="idULTest"> 
 
      <li><span class="clsCategory">Category</span>: Test1: 
          <br /><b>Name</b>: Test1 
@@ -34,7 +34,7 @@
 
       2> To the top 'internal header stylesheet' you have to add: #idTest. Example:-
 
-      #idBusinessPhoneNumbers,#idFamilyPhoneNumbers,#idFriendsPhoneNumbers,#idNoteDetails,#idTest{display:none;}
+      #idULBusiness,#idULFamily,#idULFriends,#idULNotes,#idULTest{display:none;}
 	
       ...this line ensures the list of UL-Undefined List of numbers is NOT displayed to begin with;
       but, instead, the list is kept closed until one 'clicks' the list heading to open it up. 
@@ -42,7 +42,7 @@
       3> To the bottom Javascript/JQuery you have to add 3 lines of code: #idHeaderTest/#idTest. Example:-
  
       $("h2#idHeaderTest").click(function(){
-       $("#idTest").slideToggle();
+       $("#idULTest").slideToggle();
       });
 
       ...these line are used to test whether the header text has been 'clicked' on;
@@ -147,7 +147,7 @@
 
    /* id */
 
-   #idBusinessPhoneNumbers,#idFamilyPhoneNumbers,#idFriendsPhoneNumbers,#idNoteDetails{display:none;}
+   #idULBusiness,#idULFamily,#idULFriends,#idULNotes{display:none;}
    #idCopyrightMessage{font-weight:bold;background-color:black;color:white;}
 
   </style>
@@ -174,7 +174,7 @@
     <h2 id="idHeaderBusiness">::Business</h2>
 
     <!--ul start/business phone numbers-->
-    <ul id="idBusinessPhoneNumbers"> 
+    <ul id="idULBusiness"> 
 
      <li><span class="clsCategory">Category</span>: Finance, Bank: 
          <br /><b>Name</b>: Barclays
@@ -275,7 +275,7 @@
     <h2 id="idHeaderFamily">::Family</h2>
 
     <!--ul start/family phone numbers-->
-    <ul id="idFamilyPhoneNumbers">
+    <ul id="idULFamily">
 
      <li><span class="clsCategory">Category</span>: Mother:
          <br /><b>Name</b>: Anabelle Patterson
@@ -331,7 +331,7 @@
     <h2 id="idHeaderFriends">::Friends</h2>
 
     <!--ul start/friends phone numbers-->
-    <ul id="idFriendsPhoneNumbers">
+    <ul id="idULFriends">
 
      <li><span class="clsCategory">Category</span>: Charity, Volunteering:  
          <br /><b>Name</b>: Mother Theresa
@@ -371,7 +371,7 @@
     <h2 id="idHeaderNotes">::Notes</h2>
 
     <!--ul start/notes-->
-    <ul id="idNoteDetails">
+    <ul id="idULNotes">
 
      <li><span class="clsCategory">Category</span>: Notes, Family:
          <br /><span class="clsTimeDateStampNotes">17:59 16/11/2020</span> 
@@ -417,7 +417,7 @@
     <br />
     Last updated:
     <span class="clsTimeDateStamp">
-     17:26 16/11/2020
+     06:21 16/11/2020
     </span>
    </p>
 
@@ -439,19 +439,19 @@
    $(document).ready(function(){
 
     $("h2#idHeaderBusiness").click(function(){
-     $("#idBusinessPhoneNumbers").slideToggle();
+     $("#idULBusiness").slideToggle();
     });
 
     $("h2#idHeaderFamily").click(function(){
-     $("#idFamilyPhoneNumbers").slideToggle();
+     $("#idULFamily").slideToggle();
     });
 
     $("h2#idHeaderFriends").click(function(){
-     $("#idFriendsPhoneNumbers").slideToggle();
+     $("#idULFriends").slideToggle();
     });
 
     $("h2#idHeaderNotes").click(function(){
-     $("#idNoteDetails").slideToggle();
+     $("#idULNotes").slideToggle();
     });
 
    });
