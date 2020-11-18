@@ -1,6 +1,10 @@
 # jquery
 JQuery programming code
 
+## Link to 'live' code
+
+- https://prg-jquery.netlify.app/  
+
 ## Introduction
 
 JQuery, is very good for...  
