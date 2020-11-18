@@ -6,8 +6,8 @@
       In order to make changes to this file...you have to do the following 3 things...
 
       1> Create a new HTML section called: Test; then, include it's data (in this case, all being written, manually)
-         - a h2 header section
-         - a UL-Undefined List section      
+         - a h2 header section...........#idHeaderTest
+         - a UL-Undefined List section...#idULTest     
 
 
     <h2 id="idHeaderTest">::Test</h2>
@@ -32,20 +32,20 @@
     </ul>
 
 
-      2> To the top 'internal header stylesheet' you have to add: #idTest. Example:-
+      2> To the top 'internal header stylesheet' you have to add: #idULTest. Example:-
 
       #idULBusiness,#idULFamily,#idULFriends,#idULNotes,#idULTest{display:none;}
 	
       ...this line ensures the list of UL-Undefined List of numbers is NOT displayed to begin with;
       but, instead, the list is kept closed until one 'clicks' the list heading to open it up. 
 
-      3> To the bottom Javascript/JQuery you have to add 3 lines of code: #idHeaderTest/#idTest. Example:-
+      3> To the bottom Javascript/JQuery you have to add 3 lines of code: #idHeaderTest/#idULTest. Example:-
  
       $("h2#idHeaderTest").click(function(){
        $("#idULTest").slideToggle();
       });
 
-      ...these line are used to test whether the header text has been 'clicked' on;
+      ...these lines are used to test whether the header text has been 'clicked' on;
       and, then, will toggle showing the UL-Undefined list both on and off...with each unique header click.
 
   -->
