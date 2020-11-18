@@ -23,6 +23,11 @@ It is also used for many other purposes, too...
 - mouseover  
 - etc.  
 
+Generally speaking, you can use JQuery code...; to make your web pages very highly 'interactive';    
+whilst at the same time using 'minimal' Javascript code.  
+(Otherwise, the Javascript code would have been written a whole lot longer, instead;  
+ so, it serves as a 'short cut' way of doing things...as opposed to the standard way of using Javascript.)      
+
 ## LINKS
 
 http://jquery.com/
