@@ -29,8 +29,13 @@ It is also used for many other purposes, too...
 
 Generally speaking, you can use JQuery code...; to make your web pages very highly 'interactive';    
 whilst at the same time using 'minimal' Javascript code.  
+
 (Otherwise, the Javascript code would have been written a whole lot longer, instead;  
  so, it serves as a 'short cut' way of doing things...as opposed to the standard way of using Javascript.)      
+
+**NOTE**: My own experience with using JQuery is still 'beginner' level, at the moment;   
+therefore, I'm most probably not the best at showing/demonstrating what JQuery can do;  
+so, I would suggest you go and visit JQuery official web site if you wish to learn a whole lot more.  
 
 ## LINKS
 
