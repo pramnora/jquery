@@ -34,9 +34,10 @@
 
       2> To the top 'internal header stylesheet' you have to add: #idTest. Example:-
 
-      #idBusiness,#idFinance,#idEmergency,#idFamily,#idFriends,#idNotes,#idTest,#idUtilities{display:none;}
+      #idBusinessPhoneNumbers,#idFamilyPhoneNumbers,#idFriendsPhoneNumbers,#idNoteDetails,#idTest{display:none;}
 	
-
+      ...this line ensures the list of UL-Undefined List of numbers is NOT displayed to begin with;
+      but, instead, the list is kept closed until one 'clicks' the list heading to open it up. 
 
       3> To the bottom Javascript/JQuery you have to add 3 lines of code: #idHeaderTest/#idTest. Example:-
  
@@ -44,17 +45,21 @@
        $("#idTest").slideToggle();
       });
 
+      ...these line are used to test whether the header text has been 'clicked' on;
+      and, then, will toggle showing the UL-Undefined list both on and off...with each unique header click.
+
   -->
 
   <!--NOTE(2):
-      Because this file allows you to enter 'any' data/fieldname you please...;
-      therefore, it could be used to store not just 'names/phone numbers', alone; 
+      Because this file allows you to create you own lists; as well as, enter 'any' data/fieldname you please...;
+      therefore, it could be very easily be expanded and used to store not just 'names/phone numbers', alone; 
       but, also, such things as...
 
       > names
       > addresses
       > a/c. references
       > credit and debit card nos
+      > web site URL addresses/links
       > passwords
       > -etc.
 
@@ -87,7 +92,7 @@
 
   <!--NOTE(3): List of possible future changes...
 
-             - It would have been better if the data were fetched from a database;
+             - It would have been better if the data were fetched directly from a database;
                and, that database file were stored either internally/
                or, better still, externally(easier to change/update...data, kept separate from code).
 
