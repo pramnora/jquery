@@ -3,14 +3,6 @@
  <head>
   <meta charset="UTF-8" />
   <title>Show/hide page web page content on click event...</title>
-  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script>
-   $(document).ready(function() {
-    $("h1").click(function(){
-     $("div").slideToggle();
-    }); 
-   });
-  </script>
   <style type="text/css">
    div{display;none;}
   </style>
@@ -18,5 +10,13 @@
  <body>
   <h1>Click here to both show/hide div section...</h1>
   <div>Hello, world!</div>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+   $(document).ready(function() {
+    $("h1").click(function(){
+     $("div").slideToggle();
+    }); 
+   });
+  </script>
  </body>
 </html>
