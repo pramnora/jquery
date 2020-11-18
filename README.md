@@ -1,7 +1,7 @@
 # jquery
 JQuery programming code
 
-## Link to 'live' code
+## Link to my own 'live' code
 
 - https://prg-jquery.netlify.app/  
 
