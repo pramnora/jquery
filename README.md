@@ -32,3 +32,9 @@ whilst at the same time using 'minimal' Javascript code.
 
 http://jquery.com/
 
+## CDN link
+
+>> <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+
