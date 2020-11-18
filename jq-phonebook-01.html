@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <!--NOTE(1): 
+      In order to make changes to this file...you have to do the following 3 things...
+
+      1> Create a new HTML section called: Test; then, include it's data (in this case, all being written, manually)
+         - a h2 header section
+         - a UL-Undefined List section      
+
+
+    <h2 id="idHeaderTest">::Test</h2>
+
+    <ul id="idTest"> 
+
+     <li><span class="clsCategory">Category</span>: Test1: 
+         <br /><b>Name</b>: Test1 
+         <br /><b>Telephone</b>: nnnnn
+         <br /><b>Web site</b>: <a href="https://www.test.com" target="_blank">
+                                 https://www.test.com
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Test2: 
+         <br /><b>Name</b>: Test2  
+         <br /><b>Telephone</b>: Home: nnn/Mobile: nnn
+     </li>
+
+    </ul>
+
+
+      2> To the top 'internal header stylesheet' you have to add: #idTest. Example:-
+
+      #idBusiness,#idFinance,#idEmergency,#idFamily,#idFriends,#idNotes,#idTest,#idUtilities{display:none;}
+	
+
+
+      3> To the bottom Javascript/JQuery you have to add 3 lines of code: #idHeaderTest/#idTest. Example:-
+ 
+      $("h2#idHeaderTest").click(function(){
+       $("#idTest").slideToggle();
+      });
+
+  -->
+
+  <!--NOTE(2):
+      Because this file allows you to enter 'any' data/fieldname you please...;
+      therefore, it could be used to store not just 'names/phone numbers', alone; 
+      but, also, such things as...
+
+      > names
+      > addresses
+      > a/c. references
+      > credit and debit card nos
+      > passwords
+      > -etc.
+
+      ...however, please, remember to be really careful about storing particularly 'sensitive' data;
+      such as: names/passwords/account reference/credit or debit card details/-etc.;
+      meaning, you will need to keep this file 'safe' where nobody else can access its contents;
+      or, you might wish to encrypt the data...so, that if anybody else finds it...
+      they will NOT be able to read the 'hidden' contents too very quickly and easily.
+
+      A simple form of 'letters' encryption is...
+      instead, of using somebody's full name: Adrian Thomas...just simply use, A T;
+      A, could mean either a man's name: (A)ndy/(A)drian/(A)rnold...; or, a woman's name: (A)da/(A)dele/(A)my ? 
+      you yourself will still know exactly who the friend/family member/collegue who you were referring to, actually, is...; 
+      but, other people can only just merely guess...? 
+
+      Similarly, a simple form of 'numbers' encryption is Ceaser Shift (+1)...
+                 where: 1234567890
+      becomes, instead: 0123456789 
+      ...thus, 1=0/5=4/0=9/-etc. (read topmost row number=becomes bottom most row number)    
+      ...so, a phone number 0208 becomes 9197
+      -etc.
+
+      Very kindly, please, note I'm certainly NOT saying the above methods of data 'encryption' are good;
+      because it's very simple...; but, at least, it's better than writing down everything as 'cleartext'
+      which doesn't need any form of decoding at all! 
+        
+      My best advice is, please, feel free to go make up/study/find your own 
+      far more suitable/safer data encryption methods, instead.  
+  -->
+
+  <!--NOTE(3): List of possible future changes...
+
+             - It would have been better if the data were fetched from a database;
+               and, that database file were stored either internally/
+               or, better still, externally(easier to change/update...data, kept separate from code).
+
+             - Ideally, one should like to be able to enter and manipulate 
+              (CRUD/Create/Retrieve/Update/Delete) the data, manually;
+               and, also, save it for retrieval somewhere safe on the internet:
+               Firebase/JSON/-etc.
+
+             - It would be nice if one could add a search field;
+               that would look through specific matching data categories;
+               or, even, speific matching data entries.
+  -->
+
+ <head>
+
+  <meta charset="utf-8" />
+
+  <title>JQuery test...</title>
+
+  <!--internal header styleesheet/start-->
+  <style>
+
+   /* links */
+
+   a:link{color:blue;text-decoration:none;}
+   a:visited{color:purple;}
+   a:active{color:orange;}
+   a:hover{background-color:white;color:red;text-decoration:underline;}
+
+   /* reset */
+
+   body,li,h1,h2,p{margin:0;padding:0;}
+
+   /* header/footer */
+
+   header,footer{text-align:center;}
+   h1,p{padding:25px;}
+
+   /* header */
+
+   h1{background-color:green;color:lime;}
+   h2{background-color:black;color:white;}
+
+   /* footer */
+
+   p{background-color:green;color:white;}
+
+   /* classes */
+   .clsTimeDateStamp{color:yellow;font-style:italic;font-weight:bold;} 
+   .clsTimeDateStampNotes{color:red;font-style:italic;font-weight:bold;} 
+   .clsCategory{font-weight:bold;font-style:italic;}
+
+   /* id */
+
+   #idBusinessPhoneNumbers,#idFamilyPhoneNumbers,#idFriendsPhoneNumbers,#idNoteDetails{display:none;}
+   #idCopyrightMessage{font-weight:bold;background-color:black;color:white;}
+
+  </style>
+  <!--internal header styleesheet/end-->
+
+ </head>
+ 
+ <body>
+
+  <header>
+
+   <h1>Phonebook</h1>
+
+  </header>
+
+  <main>
+
+
+
+
+
+
+
+    <h2 id="idHeaderBusiness">::Business</h2>
+
+    <!--ul start/business phone numbers-->
+    <ul id="idBusinessPhoneNumbers"> 
+
+     <li><span class="clsCategory">Category</span>: Finance, Bank: 
+         <br /><b>Name</b>: Barclays
+         <br /><b>Telephone</b>: 
+         <br /><b>Web site</b>: <a href="https://www.barclays.co.uk" target="_blank">
+                                 https://www.barclays.co.uk
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Utilities, Phone company: 
+         <br /><b>Name</b>: BT
+         <br /><b>Telephone</b>: 100 (FREE)
+         <br /><b>Web site</b>: <a href="https://www.bt.com" target="_blank">
+                                 https://www.bt.com
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Builders: 
+         <br /><b>Name</b>: CheckATrade  
+         <br /><b>Web site</b>: <a href="https://www.checkatrade.com" target="blank">
+                                 https://www.checkatrade.com
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Finance, Bank: 
+         <br /><b>Name</b>: Lloyds
+         <br /><b>Telephone</b>: 
+         <br /><b>Web site</b>: <a href="https://www.lloydsbank.com" target="blank">
+                                 https://www.lloydsbank.com
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Finance, Bank: 
+         <br /><b>Name</b>: Nat West
+         <br /><b>Telephone</b>: 
+         <br /><b>Web site</b>: <a href="https://www.natwest.com" target="blank">
+                                 https://www.natwest.com
+                                </a>
+     </li>
+
+     <br />
+
+
+     <li><span class="clsCategory">Category</span>: Charity, Animals: 
+         <br /><b>Name</b>: RSPCA  
+         <br /><b>Telephone</b>: 
+         <br /><b>Web site</b>(1): <a href="https://www.rspca.org.uk" target="blank">
+                                    https://www.rspca.org.uk
+                                   </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Utilities, Phone company: 
+         <br /><b>Name</b>: TalkTalk
+         <br /><b>Telephone</b>: 0845 655 3528/100 (FREE)
+         <br /><b>Web site</b>: <a href="https://www.talktalk.co.uk" target="blank">
+                                 https://www.talktalk.co.uk
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Utilities, Public transport: 
+         <br /><b>Name</b>: TFL/Transport For London  
+         <br /><b>Telephone</b>: Office: 0343 222 1234 (8am-8pm daily)
+         <br /><b>Web site</b>: <a href="https://www.tfl.gov.uk" target="blank">
+                                 https://www.tfl.gov.uk
+                                </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Utilities, TV Licence: 
+         <br /><b>Name</b>: TV Licensing  
+         <br /><b>Reference</b>: 
+         <br /><b>Web site</b>: <a href="https://www.tvlicensing.co.uk" target="blank">
+                                 https://www.tvlicensing.co.uk
+                                </a>
+     </li>
+
+    </ul>
+
+
+
+
+
+
+
+    <h2 id="idHeaderFamily">::Family</h2>
+
+    <!--ul start/family phone numbers-->
+    <ul id="idFamilyPhoneNumbers">
+
+     <li><span class="clsCategory">Category</span>: Mother:
+         <br /><b>Name</b>: Anabelle Patterson
+         <br /><b>Telephone</b>: Home: 0000 000 0000
+         <br /><b>Address</b>:  
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Aunt:
+         <br /><b>Name</b>: Jackie Jackson
+         <br /><b>Telephone</b>: Home: 1111 111 1111
+         <br /><b>Address</b>: 
+     </li>
+
+     <br />
+
+
+     <li><span class="clsCategory">Category</span>: Uncle:
+         <br /><b>Name</b>: James Jones
+         <br /><b>Telephone</b>: Home: 2222 222 2222/Mobile: 333 3333 3333
+         <br /><b>Address</b>:
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Personal:
+         <br /><b>Name</b>: Patrick Patterson
+         <br /><b>Telephone</b>: Home: 4444 444 4444/Mobile: 5555 55 555 55
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Cousin:
+         <br /><b>Name</b>: Shauna Shelby
+         <br /><b>Telephone</b>: Home: 66 666 666 666
+         <br /><b>Address</b>: 
+     </li>
+
+
+    </ul>
+    <!--ul end/family phone numbers-->
+
+
+
+
+
+
+
+
+
+
+    <h2 id="idHeaderFriends">::Friends</h2>
+
+    <!--ul start/friends phone numbers-->
+    <ul id="idFriendsPhoneNumbers">
+
+     <li><span class="clsCategory">Category</span>: Charity, Volunteering:  
+         <br /><b>Name</b>: Mother Theresa
+         <br /><b>Telephone</b>: Mobile: 777 777 7777 
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Arts, Teacher:  
+         <br /><b>Name</b>: Sonia Delunay
+         <br /><b>Telephone</b>: Mobile: 888 88 88 88 8
+         <br /><b>Email</b>: <a href="mailto:anyname@googlemail.com">
+                              anyname@googlemail.com
+                             </a>
+     </li>
+
+     <br />
+
+     <li><span class="clsCategory">Category</span>: Martial arts, Karate: 
+         <br /><b>Name</b>: Chuck Norris
+         <br /><b>Mobile</b>: 9999 99 99 999
+     </li>
+
+
+
+    </ul>
+    <!--ul end/friends phone numbers-->
+
+
+
+
+
+
+
+
+
+    <h2 id="idHeaderNotes">::Notes</h2>
+
+    <!--ul start/notes-->
+    <ul id="idNoteDetails">
+
+     <li><span class="clsCategory">Category</span>: Notes, Family:
+         <br /><span class="clsTimeDateStampNotes">17:59 16/11/2020</span> 
+         <br /><b>REMINDER</b>: Need to call back aunt, Jackie; who left me an answerphone message a few days back. 
+         <br /><span class="clsTimeDateStampNotes">18:32 16/11/2020</span>
+         <br /><b>LATEST UPDATE</b>: I phoned her back during the evening; but, unfortunately, there was no reply; so, I left a message on her answer machine stating I will call her back either tomorrow/or, some time during the weekend.
+     </li>
+
+    </ul>
+    <!--ul end/notes-->
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+  <!--footer/start-->
+  <footer>
+
+   <p>
+    Email:
+    <a href="mailto:pramnora@yahoo.com">
+     pramnora@yahoo.com
+    </a>
+    <br />
+    <span id="idCopyrightMessage">
+     &copy;2020 -, Mr. Paul Ramnora./All rights reserved. 
+    </span>
+    <br />
+    Page created:
+    <span class="clsTimeDateStamp">
+     04:02 14/11/2020
+    </span>
+    <br />
+    Last updated:
+    <span class="clsTimeDateStamp">
+     17:26 16/11/2020
+    </span>
+   </p>
+
+  </footer>
+  <!--footer/end-->
+
+
+
+
+
+
+
+  <!--link to external JQuery script-->
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <!--JQuery code/start...-->
+  <script>
+
+   $(document).ready(function(){
+
+    $("h2#idHeaderBusiness").click(function(){
+     $("#idBusinessPhoneNumbers").slideToggle();
+    });
+
+    $("h2#idHeaderFamily").click(function(){
+     $("#idFamilyPhoneNumbers").slideToggle();
+    });
+
+    $("h2#idHeaderFriends").click(function(){
+     $("#idFriendsPhoneNumbers").slideToggle();
+    });
+
+    $("h2#idHeaderNotes").click(function(){
+     $("#idNoteDetails").slideToggle();
+    });
+
+   });
+
+  <!--...JQuery code/end-->
+  </script>
+
+
+
+
+
+
+
+ </body>
+
+</html>
