@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+
+ <!--
+  This code was downloaded from...
+
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide
+  ...and, then, was further adapted by me to suit my own purposes...
+
+  -----
+
+The concept I had in mind works as follows...
+
+- There are 3 div sections... 
+
+- each div section has a title heading which explains what that div is meant to be all about;
+
+- the div itself explains in fuller detail all about what the title heading says.
+
+- Each div section has a [Show/Hide] button, below; which can be used to either 'show/hide' that particular div.
+
+- On top are 2 buttons: [Show All]/[Hide All]...these can be used to expand 'all' div sections/or else, hide 'all' div sections.
+
+
+...in effect, one can read through an instructional text...; by showing just the skeleton outline headings, alone; then, if you wish you can select a particular div to click on in order to read more. 
+
+Alternatively, you could just expand 'all''...; and, thus, choose to read through everything at once.
+
+The default way this page opens is everything is being shown all together at once.  
+
+ Created: Fri 6th Sep 2024 19:08 PM GMT
+ -->
+
+ <head>
+
+  <!--CSS stylesheet/start-->
+
+  <style>
+
+   html{margin:1cm;}
+
+   header,footer{text-align:center;}
+
+   /* Classes */
+
+   .clsDateTimeStamp{font-style:italic;color:red;}
+
+  </style>
+
+
+  <!--CSS stylesheet/end-->
+
+ </head>
+
+ <body>
+
+  <header>
+   <h1>JQuery: Toggle Show/Hide </h1>
+  </header>
+
+  <hr>
+
+  <main>
+
+   <p>Top controls...</p>
+
+   <button id="btnShowAll">
+    Show All
+   </button>
+
+   <button id="btnHideAll">
+    Hide All
+   </button>
+
+   <br><br>
+
+   <hr>
+
+   <h2>Title heading text 1</h2>
+
+   <div id="div1">
+    <blockquote>
+     Div 1.
+    </blockquote>
+   </div>
+
+   <br>
+ 
+   <button id="btnShowHide1">
+    Show/Hide
+   </button>
+
+   <br><br>
+
+   <hr>
+
+   <h2>Title heading text 2</h2>
+
+   <div id="div2">
+    <blockquote>
+     Div 2.
+    </blockquote>
+   </div>
+
+   <br>
+
+   <button id="btnShowHide2">
+    Show/Hide
+   </button>
+
+   <br><br>
+
+   <hr>
+
+   <h2>Title heading text 3</h2>
+
+   <div id="div3">
+    <blockquote>
+     Div 3.
+    </blockquote>
+   </div>
+
+   <br>
+
+   <button id="btnShowHide3">
+    Show/Hide
+   </button>
+
+   <br><br>
+
+  </main>
+
+  <hr>
+
+  <footer>
+
+   <p>
+    Document last modified: 
+    <br>
+    <span class="clsDateTimeStamp">
+     Fri 6 Sep 2024 19:08 PM GMT
+    </span>
+   </p>
+
+  </footer>
+
+
+  <!--...fetch the external JQuery script...-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+  </script>
+
+  <!--Javascript functions.../start-->
+
+  <script>
+
+   $(document).ready(function(){
+
+    $('#btnShowAll').click(function(){
+     $('div').show();
+    });
+
+    $('#btnHideAll').click(function(){
+     $('div').hide();
+    });
+
+    $('#btnShowHide1').click(function(){
+     $('#div1').toggle();
+    });
+
+    $('#btnShowHide2').click(function(){
+     $('#div2').toggle();
+    });
+
+    $('#btnShowHide3').click(function(){
+     $('#div3').toggle();
+    });
+
+  });
+
+  </script>
+
+  <!--Javascript functions.../end-->
+
+ </body>
+
+</html>
