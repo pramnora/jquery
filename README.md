@@ -1,6 +1,8 @@
 # jquery
 JQuery programming code
 
+Document last updated: *Fri 6 Sept 2024 20:03 PM GMT*   
+
 ## Link to my own 'live' code
 
 - https://prg-jquery.netlify.app/  
@@ -43,7 +45,7 @@ http://jquery.com/
 
 ## CDN link
 
->> <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-
+>> <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>  
+>> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
 
 
