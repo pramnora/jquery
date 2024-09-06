@@ -43,9 +43,10 @@ so, I would suggest you go and visit JQuery official web site if you wish to lea
 
 http://jquery.com/
 
-## CDN link
+## CDN links
 
->> <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>  
->> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+>> <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>   
+
+>> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
 
 
