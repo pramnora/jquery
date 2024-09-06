@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+ <!--
+  This code was downloaded from...
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide
+  ...and, then, was further adapted by me to suit my own purposes...
+
+  Namely, I wrote 3 paragraphs...;
+  each paragraph has a button which can be used to ''show/hide'' it.
+  This function works fine.
+
+  And, at the top is a link to 'show/hide ALL'...;
+  which is meant to 'show/hide ALL' paragraphs...;
+  however, the 'show/hide ALL' function isn't working...?
+ -->
+
+ <head>
+
+  <!--...fetch the external JQuery script...-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+  </script>
+
+  <!--Javascript functions.../start-->
+
+  <script>
+
+   function showHide(num){
+    $(num).toggle();
+   }
+
+   function showHideAll(){
+
+/*
+
+    $('#p1').toggle();
+    $('#p2').toggle();
+    $('#p3').toggle();
+
+*/
+
+    for (var n=1;n<=3;n++){
+     $('#p'+n).toggle();
+    }
+
+   }
+
+  </script>
+
+  <!--Javascript functions.../end-->
+
+
+  <!--CSS stylesheet/start-->
+
+  <style>
+
+   html{margin:1cm;}
+
+   header,footer{text-align:center;}
+
+   /* Classes */
+
+   .clsDateTimeStamp{font-style:italic;color:red;}
+
+  </style>
+
+
+  <!--CSS stylesheet/end-->
+
+ </head>
+
+ <body>
+
+  <header>
+   <h1>JQuery: Toggle Show/Hide </h1>
+  </header>
+
+  <hr>
+
+  <main>
+
+   <p>Top controls...</p>
+   <button onClick="showHideAll()">ShowHideAll</button>
+
+   <hr>
+
+   <p id="p1">Paragraph 1.</p>
+   <button onClick="showHide(p1)">Show/Hide</button>
+
+   <hr>
+
+   <p id="p2">Paragraph 2.</p>
+   <button onClick="showHide(p2)">Show/Hide</button>
+
+   <hr>
+
+   <p id="p3">Paragraph 3.</p>
+   <button onClick="showHide(p3)">Show/Hide</button>
+
+  </main>
+
+  <hr>
+
+  <footer>
+
+   <p>
+    Document last modified: 
+    <span class="clsDateTimeStamp">
+     Thu 5 Sep 2024 22:57 PM GMT
+    </span>
+   </p>
+
+  </footer>
+
+ </body>
+
+</html>
