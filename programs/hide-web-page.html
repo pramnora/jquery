@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <!--This page relies on the Javascript framework library: JQuery, to work.
+
+     Press key: 'h', to hide the web page content.
+     Press key: 's', to show the web page content.
+     ---------------------------------------------
+     NOTE: A savvy person might wonder what is going on...;
+           why is this person staring at a totally 'blank' web page...;
+           what is so fascinating about that...?
+           So, this might arise their suspicion to go check out seeing what is the code behind the page...?
+
+           However, it may just be far better to send the person off to a totally 'innocent' next web page/
+           or, web site, such as a search engine: google/yahoo/-etc.;
+           and, in that way far less suspicion might be invited.
+ -->
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="page-created" content="Sun 9 Aug 2026 09:43 AM GMT">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+   header,footer{text-align:center;}
+   .clsPara{text-indent:1cm;}
+   .clsDateTimeStamp{color:red;font-style:italic;}
+  </style>
+ </head>
+ <body>
+  <!-- Container wrapper -->
+  <div id="wrapper">
+   <header>
+    <h1>Paul's web page</h1>
+   </header>
+   <main>
+    <h3>Introduction</h3>
+    <p class="clsPara">Welcome to my web page.</p>
+   </main>
+   <footer>
+    <p class="clsPara">
+     Document last modified:
+     <br>
+     <span class="clsDateTimeStamp">
+      Sun 09 Aug 2026 15:19 PM GMT
+     </span>
+    </p>
+   </footer>
+  </div>
+  <script>
+    function hideContent(){
+     $("#wrapper").hide();
+    }
+    function showContent(){
+     $("#wrapper").show();
+    }
+    document.addEventListener('keydown', (event) => {
+     const key = event.key.toLowerCase();
+     if (key === 'h') { hideContent(); }
+     if (key === 's') { showContent(); }
+    });
+  </script>
+ </body>
+</html>
